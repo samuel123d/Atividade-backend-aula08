@@ -1,0 +1,33 @@
+/// Demostração de erro por path não encontrado
+GET http://localhost:8080/
+
+###
+/// Aqui você consferir os blogs registrados
+GET http://localhost:8080/api/posts/1
+
+###
+/// Aqui você pode enviar seu blog
+POST http://localhost:8080/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlzcyI6ImltZC1iYWNrZW5kIiwiYXVkIjoiaW1kLWZyb250ZW5kIiwiZW1haWwiOiJzYW11ZWwudWZybkBnbWFpbC5jb20iLCJpYXQiOjE3MzA5ODUwNzB9.Xz1a7bsir8v-Uws6oRQyoN_qab_v7W6cGJjCIMB4nI4
+
+{
+    "titulo": "Programando em JS Backend",
+    "texto": "Título do texto...",
+    "userId": 2
+}
+###
+/// Aqui você pode editar o conteudo do seu blog
+PUT http://localhost:8080/posts?id=1
+Content-type: application/json
+
+{
+    "titulo": "Uma nova era Digital ",
+    "texto": " A era digital veio para conquistar o mundo atravéz da tecnologia...",
+    "userId": 2
+}
+
+###
+/// Aqui você pode deletar algum blog do seu servidor
+DELETE  http://localhost:8080/posts?id=12
+

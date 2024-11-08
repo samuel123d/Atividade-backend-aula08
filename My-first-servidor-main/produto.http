@@ -1,0 +1,33 @@
+/// Demostração de erro por path não encontrado
+GET http://localhost:8080/
+
+###
+/// Aqui você consferir quem são os alunos registrados
+GET http://localhost:8080/produto
+
+###
+/// Aqui você pode enviar os Alunos
+POST http://localhost:8080/produto
+Content-type: application/json
+
+{
+    "nome": "Garrafa",
+    "descricao": "Garrafa de 500ml, pequena",
+    "preco": 43.55 
+    
+ 
+}
+###
+/// Altere a senha aqui
+PUT http://localhost:8080/produto?id=
+Content-type: application/json
+
+{
+    "nome": "Garrafa",
+    "descricao": "Garrafa de 500ml, pequena",
+    "preco": 43.55 
+}
+
+###
+/// Aqui você pode deletar algum aluno do seu servidor
+DELETE  http://localhost:8080/produto?id=

@@ -1,0 +1,46 @@
+/// Demostração de erro por path não encontrado
+GET http://localhost:8080/
+
+###
+/// Aqui você consferir quem são os alunos registrados
+GET http://localhost:8080/token
+###
+POST http://localhost:8080/token
+###
+/// Aqui você pode enviar os Alunos
+POST http://localhost:8080/api/usuario
+Content-type: application/json
+
+{
+    "email": "samuel.ufrn@gmail.com",
+    "senha": "sanu1221"
+    
+    
+ 
+}
+###
+POST http://localhost:8080/api/usuario/login
+Content-type: application/json
+
+{
+    "email": "samuel.ufrn@gmail.com",
+    "senha": "sanu1221"
+    
+    
+ 
+}
+###
+/// Altere a senha aqui
+PUT http://localhost:8080/usuario?id=
+Content-type: application/json
+
+{
+    "nome": "Samuel Anderson Machado Lopes",
+    "idade": 17,
+    "sexo": "masculino"
+ 
+}
+
+###
+/// Aqui você pode deletar algum aluno do seu servidor
+DELETE  http://localhost:8080/api/usuario?id=1
